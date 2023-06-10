@@ -26,7 +26,7 @@ describe(' Generate AI Video', ()=>{
         })
     })
 
-    it('Verify user can not create without business email(Synthesia Demo, sales Pitch, How-To video and Learning & development', function(){
+    it('Verify user can not create without business email Synthesia Demo, sales Pitch, How-To video and Learning & development', function(){
         cy.fixture('example').then ((data) =>{
             generateAI.genAISynthesiaDemo(data.assertSynthesiaButton)
             generateAI.genAITextArea(data.fullText, data.editToContinue)
@@ -36,7 +36,7 @@ describe(' Generate AI Video', ()=>{
     })
 
 
-    it.only('Verify character count', function(){
+    it('Verify character count', function(){
         cy.fixture('example').then ((data) =>{
             generateAI.genAISynthesiaDemo(data.assertSynthesiaButton)
             generateAI.genAITextArea(data.fullText, data.editToContinue, data.assertCharacterCountMany, data.assertCharacterCountEqual)
